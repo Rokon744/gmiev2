@@ -3,18 +3,19 @@
 import React, { useEffect, useState } from 'react'
 import Post from '../layouts/Post'
 import axios from 'axios'
+import Link from 'next/link'
 
 const Posts = () => {
   const [posts, setPosts] = useState([])
 
-  const getData = async()=>{
+  const getData = async () => {
     const response = await axios.get('/api/post')
-    setPosts(response.data)
+    setPosts(response.data.reverse())
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     getData()
-  },[])
+  }, [])
 
   return (
     <section className='flex flex-col justify-center lg:px-32 px-5 pt-24 lg:pt-16'>
@@ -29,9 +30,16 @@ const Posts = () => {
           </p>
         </div>
         <div className="posts-inner grid lg:grid-cols-3 md:grid-cols-2 gap-8 pt-10">
-          {posts.map((data, ind) => {
+          {posts.slice(0,6).map((data, ind) => {
             return <Post key={ind} data={data} />
           })}
+        </div>
+        <div className="mt-10 flex justify-center">
+          <Link href={"/postAll"}>
+            <button className='px-10 py-2 bg-brightColor hover:bg-hoverColor font-semibold text-white transition-all ease-in-out  duration-300 rounded-md'>
+              আরো পোস্ট দেখুন...
+            </button>
+          </Link>
         </div>
       </div>
 

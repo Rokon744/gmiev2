@@ -12,7 +12,7 @@ const Post = ({ item, deletePost }) => {
             </td>
             <td className='max-w-[150px]'>{item.title}</td>
             <td>{new Date(item.date).toDateString()}</td>
-            <td onClick={() => deletePost(item._id)} className='cursor-pointer' ><MdDelete className='text-[25px]' /></td>
+            <td onClick={() => deletePost(item._id)} className='cursor-pointer' ><MdDelete className='text-[25px] text-red-600' /></td>
         </tr>
     )
 }

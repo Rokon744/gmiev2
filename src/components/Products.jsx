@@ -85,8 +85,11 @@ const Products = () => {
       <div className=" flex flex-col items-center lg:flex-row justify-between mb-10 lg:mb-0">
         <div>
           <h1 className=" text-4xl font-semibold text-center lg:text-start">
-            আমাদের পণ্যসমূহ
+            এখানে আমাদের অল্প কিছু ওষুধের স্যাম্পল:
           </h1>
+          <p className=" text-2xl mt-2 text-center lg:text-start font-medium my-5">
+          আমাদের আরো ওষুধ সম্পর্কে জানতে অবশ্যই আমাদের সাথে যোগাযোগ করতে হবে |
+          </p>
           <p className=" mt-2 text-center lg:text-start">
             সেবনবিধি : রেজিঃ চিকিৎসকের পরামর্শ অনুযায়ী সেব্য ।
           </p>

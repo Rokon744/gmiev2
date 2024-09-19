@@ -6,7 +6,7 @@ const Post = ({ data }) => {
     const date = new Date(data.date)
     return (
         <article>
-            <div className='border p-5 shadow-[0_5px_12px_rgba(0,0,0,0.18)]'>
+            <div className='border p-5 shadow-[0_5px_12px_rgba(0,0,0,0.18)] hover:scale-[1.05] transition-all duration-150 ease-in-out'>
                 <h2 className='text-2xl mb-4'><strong>{data.title}</strong></h2>
                 <p className='text-[#555]'>{data.description}</p>
 
